@@ -1,0 +1,91 @@
+﻿ <!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>项目 · 刘思洋</title>
+   <link rel="stylesheet" href="assets/style.css">
+ </head>
+ <body>
+ 
+   <nav class="top-nav">
+     <a href="index.html" class="logo-link">OPEN</a>
+     <a href="about.html">关于</a>
+     <a href="skills.html">技能</a>
+     <a href="projects.html">项目</a>
+     <a href="contact.html">联系</a>
+  </nav>
+ 
+   <!-- P5 边角 -->
+   <div class="p5-corner p5-corner-tl"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-tr"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-bl"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+  <div class="p5-corner p5-corner-br"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+
+  <div class="sub-page-bg">
+    <img src="assets/images/bg-04.jpg" alt="">
+  </div>
+ 
+  <div class="sub-page">
+ 
+     <div class="sub-content">
+       <h1 style="font-size:2rem;font-weight:700;margin-bottom:32px;text-align:center;">项目</h1>
+       <div class="projects-grid">
+ 
+         <div class="project-card">
+           <h3>信贷风险评估辅助工具</h3>
+           <p class="project-desc">
+             设计并实现了一套基于规则引擎的信贷申请预处理工具。系统能够自动提取申请材料中的关键字段，标记缺失信息，并调用训练好的分类模型生成初步风险评分与审核建议，帮助审批人员快速定位高风险申请。
+           </p>
+           <p style="font-size:0.9rem;color:#636E72;margin-bottom:12px;">
+             项目亮点：设计了可配置的规则引擎模块，支持业务人员在不修改代码的情况下调整评估规则。
+           </p>
+           <p class="project-desc"><em>课程项目，数据为模拟样例。</em></p>
+           <span class="project-tag">Python</span>
+           <span class="project-tag">机器学习</span>
+          <span class="project-tag">Scikit-learn</span>
+           <p style="margin-top:12px;"><a href="project-credit-risk.html" style="font-size:0.85rem;color:#4A6FA5;font-weight:600;">查看详情 &rarr;</a></p>
+        </div>
+ 
+        <div class="project-card">
+           <h3>量化交易策略回测平台</h3>
+           <p class="project-desc">
+             使用 Python 搭建了一个轻量版回测框架，支持双均线交叉、动量因子等经典策略的历史回测与绩效评估。系统能够输出收益率曲线、最大回撤、夏普比率等关键指标，并以图表形式可视化策略表现。
+           </p>
+           <p style="font-size:0.9rem;color:#636E72;margin-bottom:12px;">
+             项目亮点：采用事件驱动架构设计，便于后续扩展新的策略类型与交易规则。
+           </p>
+           <p class="project-desc"><em>课程项目，数据为模拟样例。</em></p>
+           <span class="project-tag">Python</span>
+           <span class="project-tag">Pandas</span>
+          <span class="project-tag">Matplotlib</span>
+           <p style="margin-top:12px;"><a href="project-quant-trading.html" style="font-size:0.85rem;color:#4A6FA5;font-weight:600;">查看详情 &rarr;</a></p>
+        </div>
+ 
+        <div class="project-card">
+           <h3>区块链存证原型</h3>
+           <p class="project-desc">
+             基于以太坊 Sepolia 测试网，使用 Solidity 编写了一份文档哈希存证合约。用户可将文件的 SHA-256 摘要上传至链上，后续通过比对链上哈希值验证文件的完整性与归属。
+           </p>
+           <p style="font-size:0.9rem;color:#636E72;margin-bottom:12px;">
+             项目亮点：实现了完整的上链—查询—验证流程，前端使用 Web3.js 与 MetaMask 交互。
+           </p>
+           <p class="project-desc"><em>课程项目，数据为模拟样例。</em></p>
+           <span class="project-tag">Solidity</span>
+           <span class="project-tag">Web3.js</span>
+          <span class="project-tag">Ethereum</span>
+           <p style="margin-top:12px;"><a href="project-blockchain.html" style="font-size:0.85rem;color:#4A6FA5;font-weight:600;">查看详情 &rarr;</a></p>
+        </div>
+ 
+       </div>
+     </div>
+   </div>
+ 
+   <footer class="footer">
+     <div class="container">
+       <p>&copy; 2026 刘思洋 · 课程项目示例，内容均为模拟用途</p>
+     </div>
+   </footer>
+ 
+ <script src="assets/detector.js"></script></body>
+ </html>
