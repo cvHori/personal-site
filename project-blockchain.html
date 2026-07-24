@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>区块链存证原型 · 刘思洋</title>
+   <link rel="stylesheet" href="assets/style.css">
+ </head>
+ <body>
+ 
+   <nav class="top-nav">
+     <a href="index.html" class="logo-link">OPEN</a>
+     <a href="about.html">关于</a>
+     <a href="skills.html">技能</a>
+     <a href="projects.html">项目</a>
+     <a href="contact.html">联系</a>
+   </nav>
+ 
+   <div class="p5-corner p5-corner-tl"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-tr"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-bl"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-br"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+ 
+   <div class="sub-page-bg">
+     <img src="assets/images/bg-proj3.jpeg" alt="">
+   </div>
+ 
+   <div class="sub-page">
+     <div class="sub-content">
+       <p style="margin-bottom:16px;"><a href="projects.html" style="font-size:0.85rem;color:#636E72;">&larr; 返回项目列表</a></p>
+       <h1 style="font-size:1.8rem;font-weight:700;margin-bottom:24px;">区块链存证原型</h1>
+ 
+       <div style="background:#fff;border:1px solid #E0E0E0;border-radius:8px;padding:24px;line-height:1.8;font-size:0.95rem;">
+         <p style="margin-bottom:16px;">数字文件的归属证明与完整性验证是区块链技术最具落地潜力的场景之一。本项目基于以太坊 Sepolia 测试网，使用 Solidity 编写并部署了一份文档哈希存证合约，实现了一套完整的上链—查询—验证流程。</p>
+         <p style="margin-bottom:16px;">合约核心逻辑十分简洁：用户调用 upload 函数，传入文件的 SHA-256 哈希值与文件描述文字，合约将该哈希值与调用者地址、时间戳绑定后永久存储于链上。查询时，输入文件哈希即可返回该条存证记录的完整信息，包括上传者地址、存证时间和文件描述。验证接口则接收文件原文，在链下计算哈希后与链上记录比对，返回是否匹配及匹配的存证时间。</p>
+         <p style="margin-bottom:16px;">前端部分使用 Web3.js 库与 MetaMask 钱包交互。用户无需编写任何合约代码，直接在网页界面上选择文件、点击上传，钱包弹窗确认后等待交易上链确认即可。界面会实时显示交易哈希与区块确认数。项目在测试网上共完成了三十余笔存证测试，平均上链时间约 15 秒（取决于测试网拥堵情况），所有存证记录均可通过区块链浏览器公开查询。合约源码已上传至 GitHub 并附有完整的单元测试与部署脚本。</p>
+         <p><em style="color:#636E72;">课程项目，数据为模拟样例。部署于以太坊 Sepolia 测试网，仅供学习用途。</em></p>
+       </div>
+     </div>
+   </div>
+ 
+   <footer class="footer">
+     <div class="container"><p>&copy; 2026 刘思洋 · 课程项目示例，内容均为模拟用途</p></div>
+   </footer>
+ 
+   <script src="assets/detector.js"></script>
+ </body>
+ </html>
