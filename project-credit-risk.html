@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>信贷风险评估辅助工具 · 刘思洋</title>
+   <link rel="stylesheet" href="assets/style.css">
+ </head>
+ <body>
+ 
+   <nav class="top-nav">
+     <a href="index.html" class="logo-link">OPEN</a>
+     <a href="about.html">关于</a>
+     <a href="skills.html">技能</a>
+     <a href="projects.html">项目</a>
+     <a href="contact.html">联系</a>
+   </nav>
+ 
+   <div class="p5-corner p5-corner-tl"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-tr"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-bl"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-br"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+ 
+   <div class="sub-page-bg">
+     <img src="assets/images/bg-proj1.jpeg" alt="">
+   </div>
+ 
+   <div class="sub-page">
+     <div class="sub-content">
+       <p style="margin-bottom:16px;"><a href="projects.html" style="font-size:0.85rem;color:#636E72;">&larr; 返回项目列表</a></p>
+       <h1 style="font-size:1.8rem;font-weight:700;margin-bottom:24px;">信贷风险评估辅助工具</h1>
+ 
+       <div style="background:#fff;border:1px solid #E0E0E0;border-radius:8px;padding:24px;line-height:1.8;font-size:0.95rem;">
+         <p style="margin-bottom:16px;">信贷审批是消费金融公司最核心的业务环节之一。在海岚消费金融公司的模拟场景中，团队设计了一套基于规则引擎与机器学习的信贷申请预处理工具，目标是在不替代审批人员的前提下，提升材料整理与风险提示的效率。</p>
+         <p style="margin-bottom:16px;">系统的核心架构分为三层。底层是数据接入层，负责解析 PDF 申请表、身份证影像与银行流水等非结构化材料，使用 OCR 引擎提取关键字段并存入临时数据库。中间层是规则引擎层：团队预先定义了三十余条审核规则，覆盖身份核验、收入覆盖比、多头借贷检测与历史逾期记录等维度，每条规则均可通过配置文件独立开关与调整参数。顶层是模型评估层，基于历史审批数据训练了一个轻量级梯度提升分类模型，对每笔申请输出一个 0–100 的风险分数，并附带特征重要性排序，供审批人员参考。</p>
+         <p style="margin-bottom:16px;">项目还实现了一个交互式审核摘要面板。审批人员在打开一笔申请时，系统会自动展示：材料完整性检查结果（绿色/黄色/红色标注）、命中规则清单与对应证据片段、模型风险分数与同类申请对比分布图。所有提示信息均附带原文引用，方便人工复核。在模拟测试中，系统将单笔申请的材料整理时间从平均 12 分钟压缩至 3 分钟以内，同时保持了 92% 的关键字段识别准确率。</p>
+         <p><em style="color:#636E72;">课程项目，数据为模拟样例。工具输出仅供辅助参考，最终授信决定由授权审批人员作出。</em></p>
+       </div>
+     </div>
+   </div>
+ 
+   <footer class="footer">
+     <div class="container"><p>&copy; 2026 刘思洋 · 课程项目示例，内容均为模拟用途</p></div>
+   </footer>
+ 
+   <script src="assets/detector.js"></script>
+ </body>
+ </html>
