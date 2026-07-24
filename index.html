@@ -1,0 +1,112 @@
+﻿ <!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>刘思洋 · OPEN</title>
+   <link rel="stylesheet" href="assets/style.css">
+ </head>
+ <body>
+ 
+   <div class="home-page">
+     <div class="home-bg">
+       <img src="assets/images/bg-01.jpeg" alt="">
+     </div>
+ 
+     <div class="home-content">
+       <a href="introduction.html" class="logo-main" style="cursor:pointer;text-decoration:none;display:inline-block;">OPEN</a>
+ 
+       <div class="home-tiles">
+         <a href="about.html" class="tile" data-page="about.html">
+           <span class="tile-icon">&#9786;</span>
+           <span class="tile-label">关于</span>
+         </a>
+         <a href="skills.html" class="tile" data-page="skills.html">
+           <span class="tile-icon">&#9881;</span>
+           <span class="tile-label">技能</span>
+         </a>
+         <a href="projects.html" class="tile" data-page="projects.html">
+           <span class="tile-icon">&#9678;</span>
+           <span class="tile-label">项目</span>
+         </a>
+         <a href="contact.html" class="tile" data-page="contact.html">
+           <span class="tile-icon">&#9993;</span>
+           <span class="tile-label">联系</span>
+         </a>
+       </div>
+     </div>
+   </div>
+ 
+   <footer class="footer">
+     <div class="container">
+       <p>&copy; 2026 刘思洋 · 课程项目示例，内容均为模拟用途</p>
+     </div>
+   </footer>
+ 
+ <script>
+ (function() {
+   // ---- 创建粒子 ----
+   function spawnParticles(container, count) {
+     for (let i = 0; i < count; i++) {
+       const p = document.createElement('div');
+       p.className = 'velvet-particle';
+       const x = 10 + Math.random() * 80; // %
+       const y = 10 + Math.random() * 60; // %
+       const delay = Math.random() * 1.2;
+       const dur = 1.2 + Math.random() * 0.8;
+       p.style.cssText = `left:${x}%;top:${y}%;animation:particle-float ${dur}s ${delay}s ease-out forwards;`;
+       container.appendChild(p);
+     }
+   }
+ 
+   // ---- 开门动画 ----
+   function triggerVelvetDoor(targetUrl) {
+     const overlay = document.createElement('div');
+     overlay.className = 'velvet-overlay';
+     overlay.innerHTML =
+       '<div class="velvet-frame">' +
+         '<div class="velvet-arch"></div>' +
+         '<div class="velvet-door-l"></div>' +
+         '<div class="velvet-door-r"></div>' +
+         '<div class="velvet-glow"></div>' +
+       '</div>';
+     document.body.appendChild(overlay);
+ 
+     // 强制回流后激活淡入
+     requestAnimationFrame(function() {
+       overlay.classList.add('active');
+     });
+ 
+     // 生成粒子
+     spawnParticles(overlay.querySelector('.velvet-frame'), 18);
+ 
+     // 0.6s 后开门
+     setTimeout(function() {
+       overlay.classList.add('door-open');
+     }, 600);
+ 
+     // 2s 后跳转
+     setTimeout(function() {
+       window.location.href = targetUrl;
+     }, 2000);
+   }
+ 
+   // ---- 绑定瓷砖点击 ----
+   var tiles = document.querySelectorAll('.home-tiles .tile');
+   for (var i = 0; i < tiles.length; i++) {
+     (function(tile) {
+       tile.addEventListener('click', function(e) {
+         e.preventDefault();
+         var url = tile.getAttribute('data-page');
+         // 文字淡出
+         tile.classList.add('fade-out');
+         // 触发开门动画
+         triggerVelvetDoor(url);
+       });
+     })(tiles[i]);
+   }
+ })();
+ </script>
+ 
+ <script src="assets/detector.js"></script></body>
+ </html>
