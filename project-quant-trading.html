@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>量化交易策略回测平台 · 刘思洋</title>
+   <link rel="stylesheet" href="assets/style.css">
+ </head>
+ <body>
+ 
+   <nav class="top-nav">
+     <a href="index.html" class="logo-link">OPEN</a>
+     <a href="about.html">关于</a>
+     <a href="skills.html">技能</a>
+     <a href="projects.html">项目</a>
+     <a href="contact.html">联系</a>
+   </nav>
+ 
+   <div class="p5-corner p5-corner-tl"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-tr"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-bl"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+   <div class="p5-corner p5-corner-br"><div class="p5-stripe"></div><div class="p5-star"></div><div class="p5-dot"></div></div>
+ 
+   <div class="sub-page-bg">
+     <img src="assets/images/bg-proj2.jpeg" alt="">
+   </div>
+ 
+   <div class="sub-page">
+     <div class="sub-content">
+       <p style="margin-bottom:16px;"><a href="projects.html" style="font-size:0.85rem;color:#636E72;">&larr; 返回项目列表</a></p>
+       <h1 style="font-size:1.8rem;font-weight:700;margin-bottom:24px;">量化交易策略回测平台</h1>
+ 
+       <div style="background:#fff;border:1px solid #E0E0E0;border-radius:8px;padding:24px;line-height:1.8;font-size:0.95rem;">
+         <p style="margin-bottom:16px;">量化交易策略在投入实盘之前，必须在历史数据上进行严格的回测验证。本项目搭建了一个轻量级的回测框架，支持用户快速定义交易策略、加载历史行情数据，并在一套统一的评估体系下衡量策略表现。</p>
+         <p style="margin-bottom:16px;">框架采用事件驱动架构设计。核心循环按时间顺序逐条处理市场数据（K 线或 tick），在每一个时间节点依次触发：信号生成器（判断买卖条件）、持仓管理器（跟踪当前仓位与资金）、风险控制器（检查止损、仓位上限与最大回撤阈值）以及订单执行器（模拟成交并记录交易日志）。这种分层设计使得用户只需编写信号生成逻辑，其余模块均可复用。</p>
+         <p style="margin-bottom:16px;">平台内置了双均线交叉、布林带突破、动量因子轮动三种经典策略模板，并开放了自定义策略接口。回测完成后，系统自动生成一份绩效报告，包含：累计收益率曲线、逐笔交易明细、最大回撤区间标注、夏普比率与卡玛比率、月度收益率热力图以及蒙特卡洛模拟的收益分布区间。在沪深 300 指数 2018–2023 年数据的回测中，一个简单的双均线策略年化收益率为 7.8%，最大回撤 14.2%，夏普比率 0.71。</p>
+         <p><em style="color:#636E72;">课程项目，数据为模拟样例。历史回测结果不代表未来收益，不构成任何投资建议。</em></p>
+       </div>
+     </div>
+   </div>
+ 
+   <footer class="footer">
+     <div class="container"><p>&copy; 2026 刘思洋 · 课程项目示例，内容均为模拟用途</p></div>
+   </footer>
+ 
+   <script src="assets/detector.js"></script>
+ </body>
+ </html>
